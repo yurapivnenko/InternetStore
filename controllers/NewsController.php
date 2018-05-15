@@ -1,6 +1,6 @@
 <?php
 
-include_once ROOT.'/models/News.php';
+include_once(ROOT.'/models/News.php');
 
 class NewsController
 {
@@ -12,6 +12,8 @@ class NewsController
         echo '<pre>';
         print_r($newsList);
         echo '</pre>';
+
+        return true;
     }
 
     public function actionView($id)
@@ -23,5 +25,7 @@ class NewsController
             print_r($newsItem);
             echo '</pre>';
         }
+
+        return true;
     }
 }
