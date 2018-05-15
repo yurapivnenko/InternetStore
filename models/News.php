@@ -7,13 +7,12 @@ class News
         $id = intval($id);
 
         if ($id) {
-            $host = 'localhost';
-            $dbname = 'internet_store';
-            $user = 'root';
-            $password = '';
-            $db = new PDO("mysql:host=$host; dbname=$dbname", $user, $password);
+
+            $db = DB::getConnection();
 
             $result = $db->query('SELECT * FROM news WHERE id='.$id);
+
+            $result->setFetchMode(PDO::FETCH_ASSOC);
 
             $newsItem = $result->fetch();
 
@@ -23,15 +22,11 @@ class News
 
     public static function getNewsList()
     {
-        $host = 'localhost';
-        $dbname = 'internet_store';
-        $user = 'root';
-        $password = '';
-        $db = new PDO("mysql:host=$host; dbname=$dbname", $user, $password);
+        $db = DB::getConnection();
 
         $newsList = array();
 
-        $result = $db->query('SELECT id, title, date, short_content '
+        $result = $db->query('SELECT * '
                 . 'FROM news '
                 . 'ORDER BY date DESC '
                 . 'LIMIT 10');
@@ -41,7 +36,7 @@ class News
             $newsList[$i]['id'] = $row['id'];
             $newsList[$i]['title'] = $row['title'];
             $newsList[$i]['date'] = $row['date'];
-            $newsList[$i]['short_content'] = $row['short_content'];
+            $newsList[$i]['content'] = $row['content'];
             $i++;
         }
 
