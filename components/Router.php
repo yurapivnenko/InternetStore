@@ -15,8 +15,6 @@ class Router
         if (!empty($_SERVER['REQUEST_URI'])) {
             return trim($_SERVER['REQUEST_URI'], '/');
         }
-
-        return false;
     }
 
     public function run()
@@ -43,6 +41,7 @@ class Router
 
                 $controllerObj = new $controllerName;
                 $result = call_user_func_array(array($controllerObj, $actionName), $segments);
+
                 if ($result != null) {
                     break;
                 }
