@@ -1,3 +1,13 @@
+nav, body {
+    transition: background-color .5s;
+}
+
+.left_menu {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
 .footer-bottom {
     background-color: #ADD8E6;
     min-height: 30px;
@@ -75,7 +85,97 @@
 #main {
     transition: margin-left .5s;
     padding: 16px;
+    display: flex;
 }
+
+.latest-projects__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.latest-projects__box {
+    width: 370px;
+    margin-bottom: 30px;
+}
+
+.latest-projects__box a {
+    opacity: 0;
+}
+
+.latest-projects__box:hover a {
+    opacity: 100;
+}
+
+.latest-projects__box:hover .latest-projects__footer {
+    background-color: #362f2d;
+}
+
+.latest-projects__box:hover .latest-projects__footer:before {
+    border-bottom: 10px solid #362f2d;
+}
+
+.latest-projects__box:hover .latest-projects__title {
+    color: #fff;
+}
+
+.latest-projects__box:hover .latest-projects__category {
+    color: #c7b299;
+}
+
+.latest-projects__box:hover .latest-projects__img img {
+    opacity: 0.6;
+}
+
+.latest-projects__box:hover .latest-projects__img {
+    background-color: #111;
+}
+
+.latest-projects__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.latest-projects__img img {
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 100.5%;
+    height: auto;
+    display: block;
+}
+
+.latest-projects__footer {
+    background-color: #fbfaf8;
+    text-align: left;
+    padding: 25px 30px;
+    position: relative;
+}
+
+.latest-projects__footer:before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 19px;
+    border: 20px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    transition: 0.3s;
+}
+
+.latest-projects__title {
+    color: #c7b299;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.latest-projects__category {
+    color: #d1d1d1;
+    font-size: 14px;
+}
+
 
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
