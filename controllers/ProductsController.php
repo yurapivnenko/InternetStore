@@ -2,18 +2,21 @@
 
 include_once(ROOT.'/models/News.php');
 
-class NewsController
+class ProductsController
 {
     public function actionIndex()
     {
-        $newsList = array();
+        require_once(ROOT . '/views/products/index.html');
+
+        return true;
+        /*$newsList = array();
         $newsList = News::getNewsList();
 
         echo '<pre>';
         print_r($newsList);
         echo '</pre>';
 
-        return true;
+        return true;*/
     }
 
     public function actionView($id)

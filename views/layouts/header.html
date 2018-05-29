@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome!</title>
+    <link rel="stylesheet" href="/template/css/normalize.css">
     <link rel="stylesheet" href="/template/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<nav id="navbar" class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark" style="background-image: linear-gradient(to bottom, #211b19 0%, #4e3427 100%);">
     <span class="left_menu" onclick="openNav()">&#9776;</span>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#">Products</a>
     </div>
-    <a class="navbar-brand" href="/">YourStore</a>
+    <a class="navbar-brand mr-5" href="/">YourStore</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,16 +24,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Products
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="/products">Products</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contacts</a>
@@ -44,16 +34,16 @@
                 <a class="nav-link" href="#">About us</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <div class="input-group">
+        <form class="form-inline my-lg-0 mr-auto">
+            <div class="input-group search-group">
                 <input type="text" class="form-control" placeholder="Search...">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-info" type="submit">
+                    <button class="btn btn-light" type="submit">
                         <img src="../../template/images/search_icon.png" width="auto" height="20px">
                     </button>
                 </div>
             </div>
         </form>
-        <a class="btn ml-5" href="#">Sign up</a>
+        <a class="btn" href="#">Sign up</a>
     </div>
 </nav>
