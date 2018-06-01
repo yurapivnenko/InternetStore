@@ -1,34 +1,22 @@
 <?php
 
-include_once(ROOT.'/models/News.php');
+include_once ROOT . '/models/Category.php';
+include_once ROOT . '/models/Products.php';
 
 class ProductsController
 {
-    public function actionIndex()
+
+    public function actionView($productId)
     {
-        require_once(ROOT . '/views/products/index.html');
 
-        return true;
-        /*$newsList = array();
-        $newsList = News::getNewsList();
+        $categories = array();
+        $categories = Category::getCategoriesList();
 
-        echo '<pre>';
-        print_r($newsList);
-        echo '</pre>';
+        $product = Products::getProductById($productId);
 
-        return true;*/
-    }
-
-    public function actionView($id)
-    {
-        if ($id) {
-            $newsItem = News::getNewsItemById($id);
-
-            echo '<pre>';
-            print_r($newsItem);
-            echo '</pre>';
-        }
+        require_once(ROOT . '/views/products/view.html');
 
         return true;
     }
+
 }
