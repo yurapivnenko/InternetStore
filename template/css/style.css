@@ -6,7 +6,7 @@
     font-size: 30px;
     cursor: pointer;
     margin-right: 15px;
-    color: #fff
+    color: #c7b299;
 }
 
 .footer-bottom {
@@ -31,6 +31,10 @@
 .row p {
     margin: 0;
     color: #fff;
+}
+
+.navbar-brand {
+    color: #c7b299!important;
 }
 
 /* Style the links inside the navigation bar */
